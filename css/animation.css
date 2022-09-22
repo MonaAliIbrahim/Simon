@@ -1,0 +1,123 @@
+/* Scroll Down Animation */
+#home .scroll-container {
+  animation: 1.5s scrollmove infinite;
+}
+
+@keyframes scrollmove {
+  from {
+    opacity: 0; 
+    bottom: 60px;
+  }
+
+  to {
+    opacity: 1; 
+    bottom: 20px;
+  }
+}
+
+/* Typing Animation */
+#home h1::after {
+  content: 'I\'m';
+  top: 0;
+  left: 0;
+  animation: typing 15s infinite;
+}
+
+@keyframes typing {
+  0%  {content: 'I\'m |'}
+  1%  {content: 'I\'m s |'}
+  2%  {content: 'I\'m si |'}
+  3%  {content: 'I\'m sim |'}
+  4%  {content: 'I\'m simo |'}
+  5%  {content: 'I\'m simon |'}
+  6%  {content: 'I\'m simone |'}
+  7%  {content: 'I\'m simone o |'}
+  8%  {content: 'I\'m simone ol |'}
+  9%  {content: 'I\'m simone oli |'}
+  10% {content: 'I\'m simone oliv |'}
+  12% {content: 'I\'m simone olivi |'}
+  13% {content: 'I\'m simone olivia |'}
+  14% {content: 'I\'m simone olivia |'}
+  15% {content: 'I\'m simone olivia |'}
+  17% {content: 'I\'m simone olivi |'}
+  18% {content: 'I\'m simone oliv |'}
+  19% {content: 'I\'m simone oli |'}
+  20% {content: 'I\'m simone ol |'}
+  21% {content: 'I\'m simone o |'}
+  22% {content: 'I\'m simone |'}
+  23% {content: 'I\'m simon |'}
+  24% {content: 'I\'m simo |'}
+  25% {content: 'I\'m sim |'}
+  26% {content: 'I\'m si |'}
+  27% {content: 'I\'m s |'}
+  28% {content: 'I\'m |'}
+  29% {content: 'I\'m a |'}
+  30% {content: 'I\'m a |'}
+  31% {content: 'I\'m a f |'}
+  32% {content: 'I\'m a fr |'}
+  33% {content: 'I\'m a fre |'}
+  34% {content: 'I\'m a free |'}
+  35% {content: 'I\'m a freel |'}
+  36% {content: 'I\'m a freela |'}
+  37% {content: 'I\'m a freelan |'}
+  38% {content: 'I\'m a freelanc |'}
+  39% {content: 'I\'m a freelance |'}
+  40% {content: 'I\'m a freelancer. |'} 
+  41% {content: 'I\'m a freelance |'} 
+  42% {content: 'I\'m a freelanc |'}
+  43% {content: 'I\'m a freelan |'}
+  44% {content: 'I\'m a freela |'}
+  45% {content: 'I\'m a freel |'}
+  46% {content: 'I\'m a free |'}
+  47% {content: 'I\'m a fre |'}
+  48% {content: 'I\'m a fr |'}
+  49% {content: 'I\'m a |'}
+  50% {content: 'I\'m a |'}
+  51% {content: 'I\'m a p |'} 
+  52% {content: 'I\'m a ph |'}
+  53% {content: 'I\'m a pho |'}
+  54% {content: 'I\'m a phot |'}
+  55% {content: 'I\'m a photo |'}
+  56% {content: 'I\'m a photog |'}
+  57% {content: 'I\'m a photogr |'}
+  58% {content: 'I\'m a photogra |'}
+  59% {content: 'I\'m a photograp |'}
+  60% {content: 'I\'m a photograph |'}
+  61% {content: 'I\'m a photographe |'}
+  62% {content: 'I\'m a photographer. |'}
+  63% {content: 'I\'m a photographer |'}
+  64% {content: 'I\'m a photographe |'}
+  65% {content: 'I\'m a photograph |'}
+  66% {content: 'I\'m a photograp |'}
+  67% {content: 'I\'m a photogra |'}
+  68% {content: 'I\'m a photogr |'}
+  69% {content: 'I\'m a photog |'}
+  70% {content: 'I\'m a photo |'}
+  71% {content: 'I\'m a phot |'}
+  72% {content: 'I\'m a pho |'}
+  73% {content: 'I\'m a ph |'}
+  74% {content: 'I\'m a p |'} 
+  75% {content: 'I\'m a |'}
+  76% {content: 'I\'m a d |'}
+  77% {content: 'I\'m a de |'}
+  78% {content: 'I\'m a des |'}
+  79% {content: 'I\'m a desi |'}
+  80% {content: 'I\'m a desig |'}
+  81% {content: 'I\'m a design |'}
+  82% {content: 'I\'m a designe |'}
+  83% {content: 'I\'m a designer. |'}
+  84% {content: 'I\'m a designe |'} 
+  85% {content: 'I\'m a desig |'}
+  86% {content: 'I\'m a desi |'}
+  87% {content: 'I\'m a des |'}
+  88% {content: 'I\'m a de |'}
+  89% {content: 'I\'m a d |'}
+  90% {content: 'I\'m a |'}
+  91% {content: 'I\'m |'}
+  92% {content: 'I\' |'}
+  94% {content: 'I |'}
+  95% {content: '|'}
+  97% {content: 'I |'}
+  99% {content: 'I\' |'}
+  100% {content: 'I\'m |'}
+}
