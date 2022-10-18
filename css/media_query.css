@@ -55,11 +55,10 @@
   }
 
   /* Navbar */
-  .navbar {
-    background-color: #020202;
-  }
-  #home-navbar li.nav-item:first-child {
+  .navbar-collapse {
+    background-color: rgb(17, 17, 17);
     margin-top: 10px;
+    text-align: center;
   }
   #home-navbar li.nav-item:not(:last-child) {
     border-bottom: 1px solid gray;

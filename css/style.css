@@ -11,6 +11,7 @@
 - Footer
 - Footer Modal
 - Fixed Content
+  - Loading
   - Switcher Color
   - Move to Up Button
 */
@@ -23,6 +24,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -118,7 +120,32 @@ ul {
 
 /************ Navbar ***********/
 .navbar {
-  background-color: rgba(17, 20, 24, 0.45);
+  position: absolute;
+  background-color: transparent;
+  left: 0px;
+  right: 0px;
+  z-index: 9999;
+  transition: 1s ease-in-out;
+  -webkit-transition: 1s ea;
+  -moz-transition: 1s ea;
+  -ms-transition: 1s ea;
+  -o-transition: 1s ea;
+}
+
+.navbar-scroll {
+  position: fixed;
+  background-color: #111;
+  animation: slide-down 1.5s ease-in-out;
+  -webkit-animation: slide-down 1.5s ease-in-out;
+}
+
+@keyframes slide-down {
+  from{
+    top: -80px;
+  }
+  to {
+    top: 0;
+  }
 }
 
 .navbar .nav-pills {
@@ -130,6 +157,7 @@ ul {
 
 .nav-pills .nav-link {
   padding: 16px 14px;
+  color: #dee3e4;
 }
 
 nav .navbar-toggler:focus {
@@ -137,23 +165,6 @@ nav .navbar-toggler:focus {
   box-shadow: 0 0 0 transparent;
   border: 0;
 }
-
-/* nav .navbar-toggler {
-  position: relative;
-  transition: 5s all ease-in-out;
-} */
-
-/* nav .navbar-toggler::after {
-  font-family: 'fontawesome';
-  content: "\f0c9";
-  position: absolute;
-  right: 10px;
-  top: -10px;
-  text-align: center;
-  font-size: 26px;
-  color: #020202;
-  cursor: pointer;
-} */
 
 nav .navbar-toggler span {
   display: block;
@@ -690,6 +701,11 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
   margin-right: 8px;
 }
 
+.contact-card ul a {
+  color: var(--dark-gray-color) !important;
+  line-height: 29px;
+}
+
 #contact .form-card input {
   height: 40px;
   width:  48%;
@@ -761,6 +777,22 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
 }
 
 /************ Fixed Content ***********/
+/* Loading */
+.loading {
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.loading span {
+  color: var(--primary-color);
+}
+
 /* Switcher Color */
 .color-switcher {
   width: fit-content;
@@ -834,6 +866,7 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
 
 /* Move to Up Button */
 .move-up-btn {
+  display: none;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -842,7 +875,6 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
   color: var(--bs-white);
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 33px 5px 15px rgba(0, 0, 0, 0.149);
-  transition: 0.5s all ease-in-out;
 }
 
 .move-up-btn i {

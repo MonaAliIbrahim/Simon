@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>simone</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/faviconio-logo/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Import Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav id="home-navbar" class="navbar fixed-top navbar-expand-lg px-4">
+    <nav id="home-navbar" class="navbar navbar-expand-lg px-4">
       <a class="navbar-brand" href="#">
         <img src="images/logo-light.png" alt="Website Log"/>
       </a>
@@ -52,7 +52,7 @@
         </ul>
       </div>
     </nav>
-    <div data-bs-spy="scroll" data-bs-target="#home-navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light rounded-2" tabindex="0">
+    <div id="scrollSpy" data-bs-spy="scroll" data-bs-target="#home-navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light rounded-2" tabindex="0">
       <!-- Home Section -->
       <div id="home" class="section p-0">
         <div class="overlay">
@@ -723,15 +723,15 @@
                 <ul class="list-group mb-3">
                   <li class="list-group-item border-0 bg-transparent px-0">
                     <i class="fa fa-phone-alt mt-1"></i>
-                    <span class="mb-0">(060) 444 434 444</span>
+                    <a href="tel:060444434444" class="mb-0">(060) 444 434 444</a>
                   </li>
                   <li class="list-group-item border-0 bg-transparent px-0">
                     <i class="fa fa-fax mt-1"></i>
-                    <span class="mb-0">(060) 555 545 555</span>
+                    <a href="fax:060555545555" class="mb-0">(060) 555 545 555</a>
                   </li>
                   <li class="list-group-item border-0 bg-transparent px-0">
                     <i class="fa fa-envelope mt-1"></i>
-                    <span>chat@simone.com</span>
+                    <a href="mailto:chat@simone.com">chat@simone.com</a>
                   </li>
                 </ul>
               </div>
@@ -832,6 +832,12 @@
       </div>
     </div>
     <!-- Fixed Content -->
+    <!-- Loading -->
+    <div class="Loading">
+      <span class="spinner-grow spinner-grow-sm mx-1" role="status" aria-hidden="true"></span>
+      <span class="spinner-grow spinner-grow-sm mx-1" role="status" aria-hidden="true"></span>
+      <span class="spinner-grow spinner-grow-sm mx-1" role="status" aria-hidden="true"></span>
+    </div>
     <!-- Switcher Color -->
     <div class="color-switcher card p-3">
       <div class="card-header p-0 bg-transparent">
@@ -856,15 +862,8 @@
       <i class="fa fa-chevron-up"></i>
     </a>
     <!-- Scripts -->
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript">
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-      })
-      const tooltip = new bootstrap.Tooltip('button', {
-        boundary: document.body
-      })
-    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
