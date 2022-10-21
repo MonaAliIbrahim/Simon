@@ -16,12 +16,12 @@
 }
 
 /* Typing Animation */
-#home h1::after {
+/* #home h1::after {
   content: 'I\'m';
   top: 0;
   left: 0;
   animation: typing 15s infinite;
-}
+} */
 
 @keyframes typing {
   0%  {content: 'I\'m |'}

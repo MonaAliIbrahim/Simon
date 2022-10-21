@@ -221,8 +221,8 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
   text-transform: capitalize;
 }
 
-#home .caption h1 {
-  font-size: 64px;
+#home .caption h1 span {
+  font-size: 60px;
   line-height: 83px;
   text-transform: capitalize;
 }
@@ -760,6 +760,10 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
 }
 
 /************ Footer Modal ***********/
+.modal.fade .modal-dialog {
+  margin-top: 100px !important;
+}
+
 .footer-modal .modal-body p {
   color: var(--dark-gray-color);
   line-height: 29px;

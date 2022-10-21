@@ -6,6 +6,28 @@ $(document).ready(function() {
     });
   });
 
+  // Title Animation in Home Section
+  new Typed('.home-title', {
+    strings: ['I\'m simone olivia ','I\'m a freelancer.','I\'m a photographer.','I\'m a designer.'],
+    smartBackspace: true,
+    typeSpeed: 90,
+    backDelay: 700,
+    backSpeed: 90,
+    loop: true,
+  });
+
+  // Firing Fun wow.js
+  new WOW().init();
+
+  // Hide Navbar after Click Event
+  $('#home-navbar .nav-item').click(function() {
+    $(this).children().addClass('active');
+    $('.navbar-collapse').removeClass('show');
+    $('.navbar-toggler').attr('aria-expanded','false');
+  });
+
+  // Handle Select Options
+
   let homeCaptionOffset = $('#home .caption').offset().top,
   aboutOffset = $('#about').offset().top;
 
@@ -16,6 +38,10 @@ $(document).ready(function() {
     }else {
       $('#home-navbar').removeClass('navbar-scroll');
     }
+
+    // Handle Counter
+
+    // Handle progress bar
 
     // Handle backToTop Button
     if($(window).scrollTop() > aboutOffset) {
