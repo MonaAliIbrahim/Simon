@@ -5,7 +5,7 @@
     padding: 45px 20px;
     margin-top: 45px;
   }
-  .section {
+  section {
     padding: 25px 0;
   }
 
@@ -42,7 +42,7 @@
   }
 
   /* Footer */
-  .footer > div {
+  footer > div {
     flex-flow: row nowrap;
     justify-content: space-between;
   }
@@ -50,7 +50,7 @@
 
 @media screen and (max-width: 992px) {
   /* General */
-  .section .title {
+  section .title {
     font-size: 100px;
   }
 
@@ -75,16 +75,16 @@
     width: auto;
     margin: auto;
   }
-  #about .statistics .item {
+  #about #statistics .item {
     width: 50%;
   }
-  #about .statistics .item:after {
+  #about #statistics .item:after {
     width: 90% !important;
     height: 1px !important;
     top: 100% !important;
     left: 10% !important;
   }
-  #about .statistics .item span {
+  #about #statistics .item span {
     font-size: 30px;
   }
 
@@ -101,7 +101,7 @@
 
 @media screen and (max-width: 768px) {
   /* General */
-  .section .title {
+  section .title {
     bottom: 50%;
     font-size: 60px;
   }
@@ -143,30 +143,35 @@
 
 @media screen and (max-width: 600px) {
   /* General */
-  .section {
+  section {
     padding: 0 10px;
   }
-  .section .title {
+  section .title {
     bottom: 60%;
     font-size: 33px;
   }
-  .section .main-btn {
+  section .main-btn {
     padding: 10px 30px;
   }
 
   /* Home */
-  #home .caption h1 {
+  #home .caption h1 span {
     font-size: 38px;
+    word-break: break-word;
   }
 
   /* About */
-  #about .statistics .item {
+  #about .content {
+    margin-top: 25px;
+    padding-top: 25px;
+  }
+  #about #statistics .item {
     width: 100%;
   }
-  #about .statistics .item:after {
+  #about #statistics .item:after {
     left: 5% !important;
   }
-  #about .statistics .item:last-child::after {
+  #about #statistics .item:last-child::after {
     height: 0 !important;
   }
 
@@ -206,7 +211,7 @@
   }
 
   /* Footer */
-  .footer p {
+  footer p {
     text-align: center;
   }
 }

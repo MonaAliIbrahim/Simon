@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+  let homeCaptionOffset = $('#home .caption').offset().top,
+      skillsSectionOffset = $('.skills-section').offset().top,
+      skillsSectionHeight = $('.skills-section').height(),
+      fireCounter = false;
+
   // Hide Loading Screen
   $('.loading span').fadeOut(1000, function() {
     $('.loading').fadeOut(1000, function() {
@@ -26,11 +32,6 @@ $(document).ready(function() {
     $('.navbar-toggler').attr('aria-expanded','false');
   });
 
-  // Handle Select Options
-
-  let homeCaptionOffset = $('#home .caption').offset().top,
-  aboutOffset = $('#about').offset().top;
-
   $(window).scroll(function() {
     // Handle Navbar Scroll Effect
     if($(window).scrollTop() > homeCaptionOffset) {
@@ -38,18 +39,63 @@ $(document).ready(function() {
     }else {
       $('#home-navbar').removeClass('navbar-scroll');
     }
-
-    // Handle Counter
-
-    // Handle progress bar
-
+    // Handle progress bar Animation in Skills Section
+    if($(window).scrollTop() >= skillsSectionOffset - skillsSectionHeight * 2) {
+      showProgressValues();
+    }
+    // Handle Counter statistics Section
+    let statisticsDimensions = document.getElementById('statistics').getBoundingClientRect();
+    if($(window).scrollTop() >= statisticsDimensions.top + statisticsDimensions.height) {
+      if(!fireCounter) {
+        showStatisticsCounter();
+        fireCounter = true;
+      }
+    }
     // Handle backToTop Button
-    if($(window).scrollTop() > aboutOffset) {
+    if($(window).scrollTop() > $('#about').offset().top) {
       $('.move-up-btn').fadeIn(1000);
     }else {
       $('.move-up-btn').fadeOut(1000);
     }
   });
+
+  function showStatisticsCounter() {
+    let counterItems = $('#statistics span'),
+        counterValues = []; 
+    for(let i = 0; i < counterItems.length; i++) {
+      counterValues.push($('#statistics span').eq(i).attr('data-target'));
+    }
+    for(let i = 0; i < counterItems.length; i++) {
+      let counter = 1;
+      setInterval(() => {
+        if(counter <= counterValues[i]) {
+          $('#statistics span').eq(i).text(counter);
+          if(i != counterItems.length - 1) {
+            $('#statistics span').eq(i).append('+');
+          }
+          counter++;
+        }else {
+          i++;
+        }
+      }, 10);
+      if(i == counterItems.length - 1) {
+        clearInterval();
+      }
+    }
+  }
+
+  function showProgressValues() {
+    let progressItems = $('.progress-bar'),
+        progressValues = []; 
+    for(let i = 0; i < progressItems.length; i++) {
+      progressValues.push($('.progress-bar').eq(i).attr('aria-valuenow'));
+    }
+    for(let i = 0; i < progressItems.length; i++) {
+      for(let j = 0; j <= progressValues[i]; j++) {
+        $('.progress-bar').eq(i).css({'width': `${j}%`, 'transition': 'all 2s'});
+      }
+    }
+  }
 
   // Bootstrap Tooltip 
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));

@@ -14,6 +14,7 @@
   - Loading
   - Switcher Color
   - Move to Up Button
+- Scrollbar
 */
 
 /************ General Style ***********/
@@ -53,17 +54,17 @@ ul {
   padding: 35px 0;
 }
 
-.section {
+section {
   padding: 15px 0;
 }
 
-.section .title-container {
+section .title-container {
   position: relative;
   height: 160px;
   width: 100%;
 }
 
-.section .title {
+section .title {
   position: absolute;
   left: 50%;
   bottom: 10%;
@@ -77,7 +78,7 @@ ul {
   text-align: center;  
 }
 
-.section .title-description::after {
+section .title-description::after {
   content: "";
   position: absolute;
   top: 105%;
@@ -88,7 +89,7 @@ ul {
   background-color: var(--primary-color);
 }
 
-.section .title-description {
+section .title-description {
   position: absolute;
   left: 50%;
   top: 8%;
@@ -101,7 +102,7 @@ ul {
   text-align: center;
 }
 
-.section .main-btn {
+section .main-btn {
   padding: 15px 40px;
   color: var(--bs-white);
   font-size: 16px;
@@ -113,7 +114,7 @@ ul {
   border-color: var(--primary-color);
 }
 
-.section .main-btn:hover {
+section .main-btn:hover {
   background-color: #1baa80;
   border-color: #1baa80;
 }
@@ -313,40 +314,40 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
   color: var(--primary-color);
 }
 
-#about .statistics {
+#about #statistics {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-#about .statistics .item {
+#about #statistics .item {
   width: 25%;
   padding: 25px;
   text-align: center;
   position: relative;
 }
 
-#about .statistics .item:after {
+#about #statistics .item:after {
   content: '';
   position: absolute;
   background-color: #e5e9e9;
 }
 
-#about .statistics .item:not(:last-child):after {
+#about #statistics .item:not(:last-child):after {
   width: 1px;
   height: 100%;
   left: 100%;
   top: 0;
 }
 
-#about .statistics .item span {
+#about #statistics .item span {
   font-size: 48px;
   font-weight: 500;
   line-height: 62px;
   color:#6c757d;
 }
 
-#about .statistics .item p {
+#about #statistics .item p {
   text-transform: capitalize;
   line-height: 29px;
   color: var(--dark-gray-color);
@@ -498,6 +499,7 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
 
 #resume .progress .progress-bar {
   background-color: var(--primary-color) !important;
+  width: 0;
 }
 
 #resume .dropdown-btn {
@@ -722,34 +724,34 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
 }
 
 /************ Footer ***********/
-.footer > div {
+footer > div {
   display: flex;
   align-items: center;
   flex-flow: column wrap;
 }
 
-.footer span {
+footer span {
   text-transform: uppercase;
 }
 
-.footer p:first-child a {
+footer p:first-child a {
   color: var(--primary-color);
 }
 
-.footer p:last-child a {
+footer p:last-child a {
   color: #252b33;
 }
 
-.footer p:last-child button:hover {
+footer p:last-child button:hover {
   color: var(--primary-color);
 }
 
-.footer p:last-child button:first-child {
+footer p:last-child button:first-child {
   position: relative;
   padding-right: 15px;
 }
 
-.footer p:last-child button:first-child::after {
+footer p:last-child button:first-child::after {
   content: '';
   position: absolute;
   right: 0;
@@ -897,4 +899,30 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
 .move-up-btn:active i,
 .move-up-btn:focus i {
   color: var(--bs-white)
+}
+
+/*************** Scrollbar ***************/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-button {
+  width: 100%;
+  height: 100%;
+ }
+
+::-webkit-scrollbar-thumb {
+ border-radius: 5px;
+ background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-corner {
+ background-color: #000;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-button {
+  background-color: #eee;
+  border-radius: 5px;
 }
