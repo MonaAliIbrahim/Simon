@@ -1,5 +1,6 @@
+@import './_global_style.css';
+
 /* 
-- General Style
 - Navbar
 - Home Section
 - About Section
@@ -16,108 +17,6 @@
   - Move to Up Button
 - Scrollbar
 */
-
-/************ General Style ***********/
-:root {
-  --primary-color: #20C997;
-  --dark-gray-color: #4c4d4d;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-}
-
-h1, h2, h3, h4 {
-  font-weight: 600;
-}
-
-*::selection {
-  background-color: var(--primary-color);
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.clear-fix {
-  clear: both;
-}
-
-.container {
-  width: 100%;
-  padding: 35px 0;
-}
-
-section {
-  padding: 15px 0;
-}
-
-section .title-container {
-  position: relative;
-  height: 160px;
-  width: 100%;
-}
-
-section .title {
-  position: absolute;
-  left: 50%;
-  bottom: 10%;
-  transform: translateX(-50%);
-  font-size: 115px;
-  font-weight: 600;
-  color: #EDF0F1;
-  opacity: 0.6;
-  text-transform: uppercase; 
-  width: 100%;
-  text-align: center;  
-}
-
-section .title-description::after {
-  content: "";
-  position: absolute;
-  top: 105%;
-  left: 50%;
-  width: 85px;
-  height: 2px;
-  transform: translate(-50%);
-  background-color: var(--primary-color);
-}
-
-section .title-description {
-  position: absolute;
-  left: 50%;
-  top: 8%;
-  z-index: 2;
-  transform: translateX(-50%);
-  text-transform: capitalize;
-  font-size: 36px;
-  line-height: 54px;
-  color: #212529; 
-  text-align: center;
-}
-
-section .main-btn {
-  padding: 15px 40px;
-  color: var(--bs-white);
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  border-radius: 30px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.302);
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-
-section .main-btn:hover {
-  background-color: #1baa80;
-  border-color: #1baa80;
-}
 
 /************ Navbar ***********/
 .navbar {
@@ -468,7 +367,7 @@ nav .navbar-toggler[aria-expanded="true"] span:last-child {
 }
 
 #resume .edu-exp-container .card-text:first-of-type {
-  color: #dc3545;
+  color: var(--primary-color);
 }
 
 #resume .progress-container {
@@ -811,7 +710,7 @@ footer p:last-child button:first-child::after {
   transition: 0.5s all ease-in-out;
 }
 
-.color-switcher::after {
+.color-switcher .icon::after {
   font-family: 'fontawesome';
   content: "\f013";
   position: absolute;
@@ -827,11 +726,6 @@ footer p:last-child button:first-child::after {
   background-color: #555;
   border-radius: 5px 0 0px 5px;
   cursor: pointer;
-}
-
-.color-switcher:hover {
-  right: 0;
-  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 }
 
 .color-switcher .card-header h5 {

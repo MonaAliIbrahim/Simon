@@ -97,6 +97,29 @@ $(document).ready(function() {
     }
   }
 
+  // Toggle Color Select Options
+  $('.color-switcher .icon').click(function() {
+    currentRight = $('.color-switcher').css('right');
+    if(currentRight == '0px') {
+      $('.color-switcher').animate({right:'-185px'});
+      $('.color-switcher').css('box-shadow' , 'none');
+    }else {
+      $('.color-switcher').animate({right:'0px'});
+      $('.color-switcher').css('box-shadow' , '0 0.5rem 1rem rgb(0 0 0 / 15%)');
+    }
+  })
+
+  // Change Theme Color
+  $('.color-switcher button').click(function() {
+    let themeColor = $(this).css('background-color');
+    document.querySelector(':root').style.setProperty('--primary-color', themeColor);
+  })
+
+  // Set Default Theme Color 
+  $('#resetColorBtn').click(function() {
+    document.querySelector(':root').style.setProperty('--primary-color', '#20C997');
+  })
+
   // Bootstrap Tooltip 
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
   var tooltipList = tooltipTriggerList.map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
